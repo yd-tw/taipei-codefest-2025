@@ -16,9 +16,5 @@ export default function WalkLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return (
-    <Suspense fallback={<Loading />}>
-      {children}
-    </Suspense>
-  );
+  return <Suspense fallback={<Loading />}>{children}</Suspense>;
 }

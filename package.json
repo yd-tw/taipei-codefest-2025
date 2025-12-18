@@ -10,21 +10,21 @@
     "format": "prettier --write ."
   },
   "dependencies": {
-    "@next/third-parties": "^16.0.7",
-    "lucide-react": "^0.546.0",
-    "next": "^16.0.7",
+    "@next/third-parties": "^16.0.10",
+    "lucide-react": "^0.555.0",
+    "next": "^16.0.10",
     "ol": "^10.7.0",
     "proj4": "^2.20.2",
-    "react": "^19.2.1",
-    "react-dom": "^19.2.1"
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4.1.17",
-    "@types/node": "^22.19.1",
+    "@tailwindcss/postcss": "^4.1.18",
+    "@types/node": "^22.19.3",
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
-    "eslint": "^9.39.1",
-    "eslint-config-next": "^16.0.7",
+    "eslint": "^9.39.2",
+    "eslint-config-next": "^16.0.10",
     "prettier": "^3.7.4",
     "prettier-plugin-tailwindcss": "^0.6.14",
     "tailwindcss": "^4.1.0",

@@ -38,7 +38,6 @@ export default function MapComponent() {
   const markersLayerRef = useRef(null);
   const isInitializedRef = useRef(false);
 
-
   const [layers, setLayers] = useState({});
   const [layerVisibility, setLayerVisibility] = useState({});
   const [map, setMap] = useState(null);
@@ -103,10 +102,7 @@ export default function MapComponent() {
     setView(initialView);
 
     navigator.geolocation.getCurrentPosition((pos) => {
-      const coords = fromLonLat([
-        pos.coords.longitude,
-        pos.coords.latitude,
-      ]);
+      const coords = fromLonLat([pos.coords.longitude, pos.coords.latitude]);
 
       setPosition(coords);
 
@@ -117,7 +113,7 @@ export default function MapComponent() {
       if (!searchParams.get("lon") || !searchParams.get("lat")) {
         initialView.setCenter(coords);
       }
-    })
+    });
 
     // === 載入位置圖層 ===
     loadPositionLayer().then((positionLayer) => {
@@ -453,7 +449,11 @@ export default function MapComponent() {
             positionFeatureRef.current.setGeometry(new Point(coords));
           }
 
-          if (!isInitializedRef && view && (!searchParams.get("lon") || !searchParams.get("lat"))) {
+          if (
+            !isInitializedRef &&
+            view &&
+            (!searchParams.get("lon") || !searchParams.get("lat"))
+          ) {
             view.setCenter(coords);
             isInitializedRef.current = true;
           }

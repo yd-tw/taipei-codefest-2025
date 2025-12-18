@@ -15,7 +15,7 @@ function Loading() {
 export default function Home() {
   return (
     <Suspense fallback={<Loading />}>
-       <TaipeiMap />
+      <TaipeiMap />
     </Suspense>
   );
 }
